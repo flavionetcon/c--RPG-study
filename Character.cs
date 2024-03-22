@@ -21,7 +21,7 @@ namespace CharacterNamespace
 
         public static void ShowMenu()
         {
-            Console.WriteLine("----Ações----");
+            Console.WriteLine("----Aï¿½ï¿½es----");
             Console.WriteLine("1 - Atacar");
             Console.WriteLine("2 - Curar-se");
         }
@@ -62,11 +62,11 @@ namespace CharacterNamespace
             }
             else
             {
-                Console.WriteLine(this.name + " já está com a vida cheia!");
+                Console.WriteLine(this.name + " jï¿½ estï¿½ com a vida cheia!");
             }
         }
 
-        public static void handleRound(Character char1, Character target, string response)
+        public static void handleRound(string response, Character char1, Character target)
         {
             switch (response)
             {
@@ -77,7 +77,7 @@ namespace CharacterNamespace
                     char1.Heal();
                     break;
                 default:
-                    Console.WriteLine("Opção inválida!");
+                    Console.WriteLine("Opï¿½ï¿½o invï¿½lida!");
                     break;
             }
         }
@@ -93,6 +93,23 @@ namespace CharacterNamespace
                 Console.WriteLine("O " + char2.name + " ganhou!");
             }
             Console.WriteLine("----------------------------");
+        }
+
+        public static void handleAction(int order, Character char1, Character target)
+        {
+            switch (order)
+            {
+                case 1: 
+                    Console.WriteLine("O" + char1.name + "ataca primeiro!");
+                    break;
+                default: 
+                    Console.WriteLine("Agora ï¿½ a vez do " + target.name);
+                    break;
+            }
+            Character.ShowMenu();
+            string response = Console.ReadLine();
+            Character.handleRound(response, char1, target);
+
         }
 
     }

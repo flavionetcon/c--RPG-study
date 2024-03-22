@@ -25,42 +25,24 @@ class Program
         {
             if (char1.speed > char2.speed)
             {
-                Console.WriteLine("O" + char1.name + "ataca primeiro!");
-                Character.ShowMenu();
-                string response = Console.ReadLine();
-                Character.handleRound(char1, char2, response);
+                Character.handleAction(1, char1, char2);
                 if (char2.currentHP <= 0)
                 {
                     Character.handleResult(char1, char2);
                     break;
                 }
-
-                Console.WriteLine("Agora é a vez do " + char2.name);
-                Character.ShowMenu();
-                string response2 = Console.ReadLine();
-                Character.handleRound(char2, char1, response2);
+                    Character.handleAction(2, char2, char1);
             }
             else
             {
-                Console.WriteLine("O" + char2.name + "ataca primeiro!");
-                Character.ShowMenu();
-                string response2 = Console.ReadLine();
-                Character.handleRound(char2, char1, response2);
-
+                Character.handleAction(1, char2, char1);
                 if (char1.currentHP <= 0)
                 {
                     Character.handleResult(char1, char2);
                     break;
                 }
-
-                Console.WriteLine("Agora é a vez do " + char1.name);
-                Character.ShowMenu();
-                string response = Console.ReadLine();
-                Character.handleRound(char1, char2, response);
-            
-
+                Character.handleAction(2, char1, char2);
             }
-
         }
         Console.ReadLine();
     }

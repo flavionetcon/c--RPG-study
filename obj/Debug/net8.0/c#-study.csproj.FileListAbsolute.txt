@@ -12,3 +12,4 @@ C:\Users\flavio.diniz\Documents\teste\c#-study\obj\Debug\net8.0\refint\c#-study.
 C:\Users\flavio.diniz\Documents\teste\c#-study\obj\Debug\net8.0\c#-study.pdb
 C:\Users\flavio.diniz\Documents\teste\c#-study\obj\Debug\net8.0\c#-study.genruntimeconfig.cache
 C:\Users\flavio.diniz\Documents\teste\c#-study\obj\Debug\net8.0\ref\c#-study.dll
+C:\Users\flavio.diniz\Documents\teste\c#-study\obj\Debug\net8.0\c#-study.sourcelink.json

@@ -31,9 +31,8 @@ class Program
                 Character.handleRound(char1, char2, response);
                 if (char2.currentHP <= 0)
                 {
-                    Console.WriteLine("O jogador 1 venceu!");
                     Character.handleResult(char1, char2);
-                    return;
+                    break;
                 }
 
                 Console.WriteLine("Agora é a vez do " + char2.name);
@@ -50,27 +49,18 @@ class Program
 
                 if (char1.currentHP <= 0)
                 {
-                    Console.WriteLine("O jogador 2 venceu!");
                     Character.handleResult(char1, char2);
-                    return;
+                    break;
                 }
 
                 Console.WriteLine("Agora é a vez do " + char1.name);
                 Character.ShowMenu();
                 string response = Console.ReadLine();
-                Character.handleRound(char2, char1, response);
+                Character.handleRound(char1, char2, response);
             
 
             }
 
-        }
-        if (char1.currentHP > 0)
-        {
-            Console.WriteLine("O " + char1.name + " ganhou!");
-        }
-        else if (char2.currentHP > 0)
-        {
-            Console.WriteLine("O " + char2.name + " ganhou!");
         }
         Console.ReadLine();
     }

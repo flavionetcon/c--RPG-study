@@ -45,7 +45,7 @@ namespace CharacterNamespace
                 return;
             }
             int damage = this.attack * rnd.Next(1, 10);
-            Console.WriteLine(this.name + " atacou " + target.name + " " + "O ataque causou " + damage + " de dano!");
+            Console.WriteLine(this.name + " atacou " + target.name + " " + "\n" + "O ataque causou " + damage + " de dano!");
             target.currentHP -= damage;
             Console.WriteLine(target.name + " agora tem " + target.currentHP + " de vida");
         }
@@ -83,6 +83,7 @@ namespace CharacterNamespace
         }
         public static void handleResult(Character char1, Character char2)
         {
+            Console.WriteLine("----------------------------");
             if (char1.currentHP >= 0)
             {
                 Console.WriteLine("O " + char1.name + " ganhou!");
@@ -91,6 +92,7 @@ namespace CharacterNamespace
             {
                 Console.WriteLine("O " + char2.name + " ganhou!");
             }
+            Console.WriteLine("----------------------------");
         }
 
     }

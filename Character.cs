@@ -62,7 +62,7 @@ namespace CharacterNamespace
             }
             else
             {
-                Console.WriteLine(this.name + " j� est� com a vida cheia!");
+                Console.WriteLine(this.name + " ja esta com a vida cheia!");
             }
         }
 
@@ -100,10 +100,10 @@ namespace CharacterNamespace
             switch (order)
             {
                 case 1: 
-                    Console.WriteLine("O" + char1.name + "ataca primeiro!");
+                    Console.WriteLine(char1.name + " " +"ataca primeiro!");
                     break;
                 default: 
-                    Console.WriteLine("Agora � a vez do " + target.name);
+                    Console.WriteLine("Agora chegou a vez do " + char1.name + "atacar!");
                     break;
             }
             Character.ShowMenu();
